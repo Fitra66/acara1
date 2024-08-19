@@ -5,48 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acara 1 - HTML & CSS</title>
     <style>
-        h3 {
-            background-color: aquamarine;
-            padding: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3, h4 {
+            padding: 15px;
+            margin: 0;
         }
         h1 {
-            background-color: bisque;
+            background-color: #ffebcd; /* Bisque */
+            color: #8b4513; /* Brown */
         }
         h2 {
-            background-color: bisque;
+            background-color: #ffebcd; /* Bisque */
+            color: #8b4513; /* Brown */
+        }
+        h3 {
+            background-color: #7fffd4; /* Aquamarine */
+            color: #004d00; /* Dark Green */
         }
         h4 {
-            background-color: aquamarine;
+            background-color: #7fffd4; /* Aquamarine */
+            color: #004d00; /* Dark Green */
         }
         p {
+            background-color: #ffffe0; /* Light Yellow */
             text-indent: 30px;
             text-align: justify;
+            padding: 15px;
+            margin: 0 0 15px 0;
         }
-        table, th, td {
-            border:1px solid red;
-            box-shadow: 0 0 10px;
-            margin: 30px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
             padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        iframe {
+            border: 0;
+            border-radius: 8px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <aside></aside>
     <main>
         <section style="text-align: center;">
-            <h1 style="color: brown;">Provinsi</h1>
-            <h2 style="color: brown;">Lampung</h2>
+            <h1>Provinsi</h1>
+            <h2>Lampung</h2>
         </section>
-        <style>
-            p {
-                background-color: yellow;
-            }
-        </style>
-        <section style="text-align: center;">
+        <section>
             <h4>Deskripsi</h4>
             <p>Kota Bandar Lampung adalah sebuah kota di Indonesia sekaligus ibu kota provinsi dan kota terbesar di provinsi Lampung. Dengan kepadatan 5.332/km², Kota Bandar Lampung merupakan salah satu kota terpadat di Pulau Sumatra, serta termasuk salah satu kota besar dan kota terpadat di Indonesia, khususnya di luar Pulau Jawa.</p>
         </section>
-        <section style="text-align: center;">
+        <section>
             <h4>Penduduk</h4>
             <table>
                 <tr>
@@ -54,8 +119,8 @@
                     <th>Perempuan</th>
                 </tr>
                 <tr>
-                    <td>556781</td>
-                    <td>543328</td>
+                    <td>556,781</td>
+                    <td>543,328</td>
                 </tr>
             </table>
         </section>
@@ -85,33 +150,30 @@
             </ol>
         </section>
         <section>
-            <h3>Webaite</h3>
-            <a href="https://id.wikipedia.org/wiki/Kota_Bandar_Lampung">Kota_Bandar_Lampung</a>
+            <h3>Website</h3>
+            <a href="https://id.wikipedia.org/wiki/Kota_Bandar_Lampung">Kota Bandar Lampung</a>
         </section>
         <section>
             <h3>Gambar</h3>
-            <img src="https://bandarlampungkota.go.id/diskominfo/images/berita/552_bandarlampung.jpg" alt="" width="500" height="333">
+            <img src="https://bandarlampungkota.go.id/diskominfo/images/berita/552_bandarlampung.jpg" alt="Kota Bandar Lampung">
         </section>
         <section>
             <h3>Peta</h3>
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="820" height="560" id="gmap_canvas" src="https://maps.google.com/maps?q=lampung&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://textcaseconvert.com"></a><br><a href="https://www.alarm-clock.net"></a><br><style>.mapouter{position: relative;text-align: right;height: 560px;width: 820px;}</style><a href="https://www.ongooglemaps.com">map box</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 560px;width: 820px;}</style></div></div>
+            <div class="mapouter">
+                <iframe width="820" height="560" src="https://maps.google.com/maps?q=lampung&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
         </section>
         <section>
-            <form action="">
-                <label for="">Nama</label>
-                <input type="text" name="nama" id="NIM">
-                <br>
-                <label for="">Email</label>
-                <input type="text" name="nama" id="email">
-                <br>
-                <label for="">Kritik dan Saran</label>
-                <textarea name="kritik" id="kritik" cols="20" rows="4"></textarea>
-                <br>
-                <button type="submit">kirim</button>
+            <h3>Formulir Kontak</h3>
+            <form action="#">
+                <label for="nama">Nama</label>
+                <input type="text" name="nama" id="nama" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="kritik">Kritik dan Saran</label>
+                <textarea name="kritik" id="kritik" cols="30" rows="4" required></textarea>
+                <button type="submit">Kirim</button>
             </form>
-        </section>
-        <section>
-
         </section>
     </main>
 </body>
